@@ -36,21 +36,21 @@ const Form = () => {
             id="goodToBad"
             onClick={() => setSortGoodBad("goodToBad")}
           >
-            Top<span>--></span>
+            Top<span>--&gt;</span>
           </div>
           <div
             className="bt-sort"
             id="badToGood"
             onClick={() => setSortGoodBad("badToGood")}
           >
-            Flop<span>--></span>
+            Flop<span>--&gt;</span>
           </div>
         </div>
       </div>
 
       <div className="result">
         {moviesdata
-          .slice(0, 12)
+          .slice(0, 24)
           .sort((a, b) => {
             if (sortGoodBad === "goodToBad") {
               return b.vote_average - a.vote_average;

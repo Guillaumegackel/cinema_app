@@ -98,6 +98,18 @@ for (let i = 0; i<movie.genre_ids.length; i++){
 return genreArray.map((genre) => <li key={genre}>{genre}</li>)
 };
 
+const addStorage=()=>{
+let storedData= window.localStorage.movies ? window.localStorage.movies.split(",") : [];
+
+if (!storedData.includes(movie.id.toString())){
+storedData.push(movie.id);
+window.localStorage.movies = storedData;
+}else{
+	alert("Vous l'avez dejà rajouté")
+}
+
+};
+
 	return (
 		<div>
 			<div className="card">
@@ -112,7 +124,8 @@ return genreArray.map((genre) => <li key={genre}>{genre}</li>)
 				{movie.overview ? <h3>Synoppsis</h3> :"non renseigné"}
 				<p>{movie.overview}</p>
 
-				<div className="btn">Ajouter aux coups de coeur</div>
+				<div className="btn" onClick={()=> addStorage()}>
+					Ajouter aux coups de coeur</div>
 
 			</div>
 
