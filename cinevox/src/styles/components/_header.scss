@@ -1,24 +1,27 @@
 .header {
   h1 {
-    font-size: 3.3rem;
+    font-size: 5rem;
     text-shadow: 2px 3px 0px $color-1;
     text-align: center;
     letter-spacing: 2px;
   }
   nav {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 
     ul {
       display: flex;
+      flex-direction: row;
+
 
       a {
         text-decoration: none;
         color: $white;
         border-radius: 10px;
-        width: 102px;
+        width: 130px;
         text-align: center;
         margin-right: 5px;
 
@@ -28,6 +31,7 @@
         }
         &:hover {
           background: $black;
+          transition: 0.3s;
         }
       }
       a.nav-active {
@@ -35,8 +39,15 @@
 
         &:hover {
           background: $black;
+          transition: 0.3s;
         }
       }
     }
   }
+}
+
+.titre-coup-de-coeur{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }

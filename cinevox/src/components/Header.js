@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
+         <h1>Le ciné de WebMe</h1>
       <nav>
         <ul>
           <NavLink
@@ -21,7 +22,7 @@ const Header = () => {
           </NavLink>
         </ul>
       </nav>
-      <h1>Cinevox</h1>
+   
     </div>
   );
 };

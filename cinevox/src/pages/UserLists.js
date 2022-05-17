@@ -23,9 +23,9 @@ for (let i = 0; i<moviesId.length; i++){
   return (
     <div className="user-list-page">
       <Header />
-      <h2>
-        Coup de Coeur <span>💓</span>
-      </h2>
+      <div className="titre-coup-de-coeur">
+       Vos  Coups de Coeur <span>💓</span>
+      </div>
       <div className="result">
 	  {ListData.length > 0 ? ListData.map((movie)=> <Card movie={movie} key={movie.id} /> 
 	  ) : (<h2>Aucun coup de coeur pour le moment</h2> )}
