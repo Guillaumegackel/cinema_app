@@ -144,7 +144,7 @@ const Card = ({ movie }) => {
                 <li key={index}>{genre.name}</li>
               ))}
         </ul>
-        {movie.overview ? <h3>Synoppsis</h3> : "non renseigné"}
+        {movie.overview ? <h3>Synopsis</h3> : "non renseigné"}
         <p>{movie.overview}</p>
 
         {movie.genre_ids ? (
